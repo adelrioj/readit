@@ -12,11 +12,13 @@ class StoriesController < ApplicationController
   def create
     @story = Story.new(story_params)
     @story.save
+    flash[:notice] = 'Story submission succeeded'
     redirect_to stories_path
   end
 
   private
 
+  # Mass Assignment Protection
   def story_params
     params.require(:story).permit(:name, :link)
   end
