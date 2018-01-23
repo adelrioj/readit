@@ -20,7 +20,8 @@ class StoryTest < ActiveSupport::TestCase
   test 'is valid with required attributes' do
     s = Story.create(
       name: 'My test submission',
-      link: 'http://www.testsubmission.com/')
+      link: 'http://www.testsubmission.com/'
+    )
     assert s.valid?
   end
 end

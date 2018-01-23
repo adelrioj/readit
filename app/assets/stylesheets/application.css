@@ -18,9 +18,14 @@ body {
     margin: 15px 25px;
     font-family: Helvetica, Arial, sans-serif;
 }
-p { margin: 0 }
+p {
+    margin: 0
+}
 input {
     margin-bottom: 1em;
+}
+form div {
+    font-weight: bold;
 }
 #content {
     background-color: #fff;
