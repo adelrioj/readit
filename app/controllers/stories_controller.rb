@@ -19,6 +19,10 @@ class StoriesController < ApplicationController
     end
   end
 
+  def show
+    @story = Story.find(params[:id])
+  end
+
   private
 
   # Mass Assignment Protection
