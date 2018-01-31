@@ -7,7 +7,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'has a votes association' do
-    assert_equal 1, users(:glenn).votes.size
+    assert_equal 0, users(:glenn).votes.size
     assert users(:john).votes.includes votes(:two)
   end
 
