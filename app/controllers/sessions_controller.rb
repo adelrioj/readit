@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-
-  before_action :current_user
-
   def new
   end
 
@@ -17,12 +14,5 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = @current_user = nil
-  end
-
-  protected
-
-  def current_user
-    return unless session[:user_id]
-    @current_user = User.where(id: session[:user_id]).first
   end
 end
