@@ -18,10 +18,14 @@ class StoryTest < ActiveSupport::TestCase
   end
 
   test 'is valid with required attributes' do
-    s = Story.create(
+    s = users(:glenn).stories.create(
       name: 'My test submission',
       link: 'http://www.testsubmission.com/'
     )
     assert s.valid?
+  end
+
+  test 'is associated with a user' do
+    assert_equal users(:glenn), stories(:one).user
   end
 end

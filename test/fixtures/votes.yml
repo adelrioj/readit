@@ -2,5 +2,8 @@
 
 one:
   story: one
+  user: john
+
 two:
   story: one
+  user: john

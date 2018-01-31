@@ -11,7 +11,7 @@ class VoteTest < ActiveSupport::TestCase
   end
 
   test 'return 3 latest votes' do
-    10.times { stories(:one).votes.create }
+    10.times { stories(:one).votes.create(user: users(:glenn)) }
     assert_equal 3, stories(:one).votes.latest.size
   end
 end
