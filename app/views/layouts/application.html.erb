@@ -26,10 +26,13 @@
     <div id="notification"><%= flash[:notice] %></div>
   <% end %>
   <%= yield %>
+
 </div>
+
 <ul id="navigation">
   <li><%= link_to 'Front page stories', stories_path %></li>
   <li><%= link_to 'Submit a new story!', new_story_path %></li>
 </ul>
+
 </body>
 </html>
