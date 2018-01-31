@@ -1,6 +1,8 @@
 
 class StoriesController < ApplicationController
 
+  before_action :ensure_login, only: %i[new create]
+
   def index
     @story = Story.order('RANDOM()').first
   end
